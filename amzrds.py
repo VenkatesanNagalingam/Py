@@ -1,6 +1,11 @@
+import os
+import flask
 import sys
 import logging
 import pymysql
+app = flask.Flask(__name__)
+
+@app.route("/")
 def webh():
   db_username = "root"
   db_password = "root1234"
@@ -14,3 +19,5 @@ def webh():
   data=cur.execute(sql)
   d=cur.fetchone()
   return d
+if __name__ == '__main__':
+  app.run()
