@@ -10,4 +10,4 @@ def webh():
   
   return "Hello world"
 if __name__ == '__main__':
-  app.run(int(os.environ.get('PORT', 33507)))
+  app.run()
